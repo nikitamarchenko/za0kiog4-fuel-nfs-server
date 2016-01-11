@@ -1,0 +1,16 @@
+attributes:
+  export:
+    value: '/tmp'
+    label: 'Export folder'
+    description: "NFS server share"
+    weight: 35
+    type: "text"
+    regex:
+      source: '\S'
+      error: "Error this field cannot be empty"
+  clients:
+    value: '10.0.0.0/24(rw,insecure,async,no_root_squash)'
+    label: 'Access'
+    description: "Client settings"
+    weight: 36
+    type: "text"

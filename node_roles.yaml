@@ -1,0 +1,4 @@
+za0kiog4_nfs_server:
+  name: "za0kiog4 NFS Server"
+  description: "NFS server"
+  conflicts: ['controller']

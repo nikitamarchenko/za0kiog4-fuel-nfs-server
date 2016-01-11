@@ -1,0 +1,21 @@
+- id: za0kiog4_nfs_server
+  type: group
+  role: [za0kiog4_nfs_server]
+  tasks:
+    - hiera
+    - globals
+  required_for: [deploy_end]
+  requires: [deploy_start]
+  parameters:
+    strategy:
+      type: parallel
+
+- id: config-za0kiog4-task
+  type: puppet
+  groups: [za0kiog4_nfs_server]
+  required_for: [deploy_end]
+  requires: [deploy_start]
+  parameters:
+    puppet_manifest: za0kiog4-nfs-server-config.pp
+    puppet_modules: "puppet/modules:/etc/puppet/modules"
+    timeout: 600
