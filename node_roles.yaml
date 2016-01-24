@@ -4,4 +4,3 @@ za0kiog4_nfs_server:
   conflicts: ['controller', 'primary-controller']
   limits:
     max: 1
-    min: 1

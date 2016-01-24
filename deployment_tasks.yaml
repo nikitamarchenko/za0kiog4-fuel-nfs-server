@@ -2,9 +2,15 @@
   type: group
   role: [za0kiog4_nfs_server]
   tasks:
+    - fuel_pkgs
     - hiera
     - globals
-  required_for: [deploy_end]
+    - logging
+    - tools
+    - netconfig
+    - hosts
+    - firewall
+  required_for: [primary-controller, controller, deploy_end]
   requires: [deploy_start]
   parameters:
     strategy:

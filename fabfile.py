@@ -21,6 +21,8 @@ def build():
 def install():
     put('za0kiog4-1.0-1.0.0-1.noarch.rpm', '/root/')
     run('fuel plugins --install za0kiog4-1.0-1.0.0-1.noarch.rpm')
+    run('rm za0kiog4-1.0-1.0.0-1.noarch.rpm')
+    local('rm za0kiog4-1.0-1.0.0-1.noarch.rpm')
 
 def uninstall():
     run('fuel plugins --remove za0kiog4==1.0.0')

@@ -1,6 +1,6 @@
 attributes:
   export:
-    value: '/tmp'
+    value: '/var/lib/za0kiog4'
     label: 'Export folder'
     description: "NFS server share"
     weight: 35
@@ -9,7 +9,7 @@ attributes:
       source: '\S'
       error: "Error this field cannot be empty"
   clients:
-    value: '10.0.0.0/24(rw,insecure,async,no_root_squash)'
+    value: '*(rw,insecure,async,no_root_squash)'
     label: 'Access'
     description: "Client settings"
     weight: 36
