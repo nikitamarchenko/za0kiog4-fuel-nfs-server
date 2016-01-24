@@ -1,0 +1,21 @@
+volumes:
+  - id: "za0kiog4"
+    type: "vg"
+    min_size:
+      generator: "calc_gb_to_mb"
+      generator_args: [20]
+    label: "za0kiog4 data"
+    volumes:
+      - mount: "/var/lib/za0kiog4"
+        type: "lv"
+        name: "za0kiog4"
+        file_system: "ext4"
+        size:
+          generator: "calc_total_vg"
+          generator_args: ["za0kiog4"]
+
+volumes_roles_mapping:
+  za0kiog4_nfs_server:
+    - {allocate_size: "min", id: "os"}
+    - {allocate_size: "min", id: "logs"}
+    - {allocate_size: "all", id: "za0kiog4"}
