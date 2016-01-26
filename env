@@ -1,0 +1,4 @@
+dos.py create --vcpu 2 --node-count 3 --ram 1024 --iso-path iso/MirantisOpenStack-7.0.iso --admin-ram 2048 --admin-vcpu 4 --second-disk-size 25 --third-disk-size 25 ff
+dos.py admin-setup ff
+dos.py slave-change --node-name slave-01 --ram 2048 ff
+
